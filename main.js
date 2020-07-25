@@ -1,3 +1,4 @@
+
 function isSolved(board) {
     if (board[0].every(n => n === 1) || board[1].every(n => n === 1) || board[2].every(n => n === 1) ||
         (board[0][0] === 1 && board[1][0] === 1 && board[2][0] === 1) ||
@@ -5,7 +6,7 @@ function isSolved(board) {
         (board[0][2] === 1 && board[1][2] === 1 && board[2][2] === 1) ||
         (board[0][0] === 1 && board[1][1] === 1 && board[2][2] === 1) ||
         (board[0][2] === 1 && board[1][1] === 1 && board[2][0] === 1)) {
-        game.innerHTML='Крестики победили'
+        game.innerHTML = 'Крестики победили'
         return 1;
     } else if (board[0].every(n => n === 2) || board[1].every(n => n === 2) || board[2].every(n => n === 2) ||
         (board[0][0] === 2 && board[1][0] === 2 && board[2][0] === 2) ||
@@ -13,12 +14,12 @@ function isSolved(board) {
         (board[0][2] === 2 && board[1][2] === 2 && board[2][2] === 2) ||
         (board[0][0] === 2 && board[1][1] === 2 && board[2][2] === 2) ||
         (board[0][2] === 2 && board[1][1] === 2 && board[2][0] === 2)) {
-            game.innerHTML='Нолики победили'
+        game.innerHTML = 'Нолики победили'
         return 2;
     } else if (board[0].includes(0) || board[1].includes(0) || board[2].includes(0)) {
         return -1;
     } else {
-        game.innerHTML='Ничья'
+        game.innerHTML = 'Ничья'
         return 0;
     }
 }
@@ -76,7 +77,7 @@ elem.forEach(el => {
 
     });
     el.addEventListener('touchstart', (e) => {
-        alert(1)
+        
         if (per == true) {
             if (board[e.target.id.slice(1, 2)][e.target.id.slice(4, 5)] == 0) {
                 e.target.insertAdjacentHTML('afterbegin', '<div class="d24"></div>');
