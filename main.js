@@ -74,5 +74,27 @@ elem.forEach(el => {
 
         }
 
+    });
+    supplemented
+    el.addEventListener('touchstart', (e) => {
+        if (per == true) {
+            if (board[e.target.id.slice(1, 2)][e.target.id.slice(4, 5)] == 0) {
+                e.target.insertAdjacentHTML('afterbegin', '<div class="d24"></div>');
+                board[e.target.id.slice(1, 2)][e.target.id.slice(4, 5)] = 1;
+
+                setTimeout(() => isSolved(board), 100);
+                per = false;
+            }
+
+        } else {
+            if (board[e.target.id.slice(1, 2)][e.target.id.slice(4, 5)] == 0) {
+                e.target.insertAdjacentHTML('afterbegin', '<div class="d1"></div>');
+                board[e.target.id.slice(1, 2)][e.target.id.slice(4, 5)] = 2;
+                setTimeout(() => isSolved(board), 100);
+                per = true;
+            }
+
+        }
+
     })
 })
