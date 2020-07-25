@@ -76,6 +76,7 @@ elem.forEach(el => {
 
     });
     el.addEventListener('touchstart', (e) => {
+        alert(1)
         if (per == true) {
             if (board[e.target.id.slice(1, 2)][e.target.id.slice(4, 5)] == 0) {
                 e.target.insertAdjacentHTML('afterbegin', '<div class="d24"></div>');
