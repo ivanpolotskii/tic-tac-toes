@@ -10,6 +10,7 @@
 }
 
 .elem {
+    transition: 500ms;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,4 +114,12 @@
     width: 40px;
     height: 40px;
     background-color: white;
+}
+
+.but{
+    font-size: 30px;
+}
+
+.game{
+    font-size: 50px;
 }
