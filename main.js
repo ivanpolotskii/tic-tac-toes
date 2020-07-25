@@ -75,7 +75,6 @@ elem.forEach(el => {
         }
 
     });
-    supplemented
     el.addEventListener('touchstart', (e) => {
         if (per == true) {
             if (board[e.target.id.slice(1, 2)][e.target.id.slice(4, 5)] == 0) {
