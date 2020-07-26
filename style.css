@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(253, 161, 161);
+    background-color: orange;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: white;
     font-size: 27px;
